@@ -1,0 +1,95 @@
+@primary: #3598db;
+@p: -4px;
+@p-back: 0;
+.example-two{
+  background: #e74c3c;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.trans{
+  -webkit-transition: all .5s ease-out ;
+    -moz-transition: all .5s ease-out ;
+    -o-transition: all .55s ease-out ;
+    transition: all .5s ease-out ;
+}
+.mt{
+  margin-top: 100px;
+  text-align: center;
+}
+.btn-2{
+  margin-right: 30px;
+}
+.btn-custom{
+  border: 1px solid #212121;
+  border-radius: 0;
+  padding: 20px 40px;
+  font-size: 20px;
+  color: #212121;
+  position: relative;
+  .trans;
+}
+.r{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background: #212121;
+    .trans;
+
+  }
+.r1{
+  top: @p;
+  left: @p;
+}
+.r2{
+  bottom: @p;
+  left: @p;
+}
+
+.r3{
+  top: @p;
+  right: @p;
+}
+.r4{
+  bottom: @p;
+  right: @p;
+}
+
+//hover styles
+.btn-custom.style1{
+  text-decoration: none;
+  &:hover{
+    background: @primary;
+    color: #fff;
+    border-color: #fff;
+    .r{
+        background: #fff;
+      }
+      .r1{
+        top: @p-back;
+        left: @p-back;
+      }
+      .r2{
+        bottom: @p-back;
+        left: @p-back;
+      }
+
+      .r3{
+        top: @p-back;
+        right: @p-back;
+      }
+      .r4{
+        bottom: @p-back;
+        right: @p-back;
+      }
+  }
+}
+
+#example-two-h2 {
+  /* https://stackoverflow.com/questions/2808592/absolute-positioning-text-alignment */
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
